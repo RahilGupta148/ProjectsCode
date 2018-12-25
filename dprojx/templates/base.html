@@ -1,0 +1,364 @@
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web site</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <!--CUSTOM MAIN STYLES-->
+    <link href="{% static 'assets/css/basic.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21208757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Bootstrap Core CSS -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/tinycircleslider.css' %}" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.core.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.default.css' %}">
+<style type="text/css">
+.topnav {
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:#E8DAEF;
+  color: black;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: #111111; */
+
+}
+
+.active {
+  /* background-color: #111111; */
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.cube-page {
+  color: #222;
+
+}
+
+.cube-container {
+  margin: 40px;
+}
+
+.box-wrapper {
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+}
+
+.box-faces {
+  position: relative;
+  width: 300px;
+  transform-style: preserve-3d;
+}
+
+.box-faces p {
+  padding: 0;
+  margin: 0;
+}
+
+.box-face {
+  outline: 1px solid #999;
+  position: absolute;
+  width: 300px;
+  height: 190px;
+  opacity: 0.98;
+  box-shadow: inset 0px 0px 100px #555;
+}
+
+.box-face--is-back {
+  transform: translateZ(-100px) rotateY(180deg);
+  background-color: #eee;
+}
+
+.box-face--is-right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+  background-color: #ddd;
+}
+
+.box-face--is-left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  background-color: #ddd;
+}
+
+.box-face--is-top {
+  transform: rotateX(-90deg) translateY(-100px);
+  transform-origin: top center;
+  background-color: #fafafa;
+}
+
+.box-face--is-bottom {
+  transform: rotateX(90deg) translateY(100px);
+  transform-origin: bottom center;
+  background-color: #bbb;
+}
+
+.box-face--is-front {
+  transform: translateZ(200px);
+  background-color: #eee;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.box-faces, .shadow {
+  animation: spin 30s infinite linear;
+}
+
+.icon-rocket {
+  color: #4F5D75;
+}
+
+.shadow-wrapper {
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+
+}
+
+.shadow {
+  position: relative;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.shadow div {
+  position: absolute;
+  width: 200px;
+  height: 125px;
+  top: 0px;
+  opacity: 0.98;
+  box-shadow: 0px 0px 100px #000;
+  transform: rotateX(90deg) translateY(100px);
+  transform-origin: bottom center;
+}
+#partnersList  img {
+  margin: 10px 2px;
+  height: 97px;
+  border: 4px solid lightgray;
+}
+.td-center {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+body {
+  font-size: 14px;
+}
+.buyBtn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 10px 3px 10px;
+  border: solid #1f628d 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buyBtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+html,
+body {
+    height: 15% !important;
+}
+
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover; */
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.demo{
+  margin-left: 50px;
+}
+.margin{
+  margin: 50px;
+}
+.bg1{
+  background-repeat: no-repeat;
+  background-size: 1800px 1800px;
+}
+
+</style>
+<body style="background-image:url('{% static "images/ma16.jpg" %}')" class="bg1">
+
+<nav class="navbar navbar-inverse bg1" style="background-color:#2C3E50">
+ <!-- style="background-image:url('{% static "images/ma16.jpg" %}')"> -->
+<div class="container-fluid">
+{# Django Home Link / Admin Link / Register Link#}
+<ul class="nav navbar-nav" >
+<div class="topnav" id="myTopnav">
+  <a href="#" ><img src="{% static "images/logo1.png" %}" alt="LOGO" height="55x" width="200px"></a>
+  <a href="{% url 'index' %}"><h4 class="active"><i style="color:#E8DAEF" class="fa fa-home"></i></h4></a></li>
+
+  {% if user.is_authenticated %}
+
+    <a href="{% url 'dappx:projectlist' %}"><h4><b>PROJECTS</b></h4></a>
+
+  {% else %}
+  <a href="{% url 'dappx:user_login'%}"> <h4><b>PROJECTS</b></h4></a>
+  {% endif %}
+
+<!-- <a href="#abc"><h4><b>CONTACT US</b></h4></a></li> -->
+
+
+{# Some logic on what to display for last item#}
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}"><h4><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;LOGOUT</b></h4></a></li>
+{% else %}
+<a href="{% url 'dappx:register' %}"><h4><span class="glyphicon glyphicon-user"></span><b> SIGN UP</b></h4></a></li>
+
+<a href="{% url 'dappx:user_login' %}"><h4><span class="glyphicon glyphicon-log-in"></span> <b> LOGIN</b></h4></a></li>
+{% endif %}
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container">
+{% block body_block %}
+{% endblock %}
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="{% static 'assets/js/bootstrap.js' %}"></script>
+<!-- METISMENU SCRIPTS -->
+<script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
+<!-- CUSTOM SCRIPTS -->
+<script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+
+
+    <script src="{% static 'js/jquery-latest.min.js' %}"></script>
+    <script src"{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/scrollReveal.js' %}"></script>
+    <script src="{% static '/js/alertify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.tinycircleslider.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/js/socket.io.2.0.3.slim.js' %}"></script>
+
+</body>
+</html>

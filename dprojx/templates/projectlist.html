@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% block body_block %}
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <title>projects list</title>
+
+    <style>
+  .footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #111111;
+
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
+div.gallery {
+  margin: 35px;
+  background-color: #EAEDED;
+  border: 10px solid #ccc;
+  float: left;
+  width: 300px;
+  height: 330px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body style="background-color: #fffff">
+
+  {% for obj in documents %}
+<div class="gallery">
+
+    <img src="{{ obj.vidimage.url }}" alt="not coming">
+
+  <div class="desc"> <b> {{ obj.docname }}</b><br>
+      <a target="_blank" href="{{ obj.project_video.url }}">  <button type="button" class="btn btn-lg btn-success"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
+      <a href="{% url 'dappx:buynow' %}"> <button type="button" name="button" class="btn btn-lg btn-success">Buy Now!</button></a>
+  </div>
+</div>
+  {% endfor %}
+
+{% endblock %}
+
+
+
+
+  </body>
+</html>

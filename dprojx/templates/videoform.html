@@ -1,0 +1,12 @@
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+<h1>
+    {% csrf_token %}
+    {{ DocumentForm.as_p }}
+
+    <button type="submit">upload</button>
+  </form>
+
+  <p><a href="{% url 'dappx:projectlist' %}">Return to projectlist!!</a></p>
+</h1>
+{% endblock %}
