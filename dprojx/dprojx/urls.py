@@ -20,12 +20,16 @@ from dappx import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('first_app/',include('first_app.urls')),
     path('',views.index,name='index'),
     path('special/',views.special,name='special'),
     path('dappx/',include('dappx.urls')),
+    # path('', searchposts, name='searchposts'),
+    # path('search/', include('search.urls', namespace='search')),
+
     # path('projectlist/',views.projectlist,name='projectlist'),
     path('logout/', views.user_logout, name='logout')
 ]
