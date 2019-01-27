@@ -52,7 +52,7 @@
 }
 
 .topnav a:hover {
-  background-color:#E8DAEF;
+  background-color:#395998;
   color: black;
 }
 
@@ -265,10 +265,6 @@ body {
   width: 100%;
   height: 50%;
   background-position: center;
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -282,41 +278,37 @@ body {
   margin: 50px;
 }
 .bg1{
-  background-repeat: no-repeat;
-  background-size: 1800px 1800px;
+ background-repeat: no-repeat;
+ background-size: 100% 3800px;
+
 }
 
-</style>
-<body style="background-image:url('{% static "images/ma16.jpg" %}')" class="bg1">
 
-<nav class="navbar navbar-inverse bg1" style="background-color:#2C3E50">
- <!-- style="background-image:url('{% static "images/ma16.jpg" %}')"> -->
+</style>
+<body style="background-image: url('{% static "/images/back.png" %}')" class="bg1">
+<nav class="navbar navbar-inverse" style="background-color:#05386B; opacity: 0.7; important;">
 <div class="container-fluid">
 {# Django Home Link / Admin Link / Register Link#}
 <ul class="nav navbar-nav" >
 <div class="topnav" id="myTopnav">
-  <a href="#" ><img src="{% static "images/logo1.png" %}" alt="LOGO" height="55x" width="200px"></a>
-  <a href="{% url 'index' %}"><h4 class="active"><i style="color:#E8DAEF" class="fa fa-home"></i></h4></a></li>
-
+  <a href="{% url 'index' %}" ><img src="{% static "images/logomain.png" %}" alt="LOGO" height="120px" width="230px"></a>
+  <a href="{% url 'index' %}"><h3 class="active"><i style="color:white" class="fa fa-home"></i></h3></a></li>
+  <a href="{% url 'dappx:projectlist' %}"><h3 style="color:white;"><b>Projects</b></h3></a>
+  <a href="{% url 'dappx:Cprogram'%}"><h3 style="color:white;"><b>Python Practice</b></h3></a>
   {% if user.is_authenticated %}
+  <a href="{% url 'dappx:MyProfile'%}"> <h3 style="color:white;"><b><img style='width:30px; height:30px' src="{% static "images/profile.png" %}"/> Profile</b></h3></a>
 
-    <a href="{% url 'dappx:projectlist' %}"><h4><b>PROJECTS</b></h4></a>
+  <a href="{% url 'logout' %}"><h3 style="color:white;"><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;Logout</b></h3></a></li>
 
   {% else %}
-  <a href="{% url 'dappx:user_login'%}"> <h4><b>PROJECTS</b></h4></a>
+  <a href="{% url 'dappx:register' %}"><h3 style="color:white;"><span class="glyphicon glyphicon-user"></span><b> Sign Up</b></h3></a></li>
+
+  <a href="{% url 'dappx:user_login' %}?next={{request.path}}"><h3 style="color:white;"><span class="glyphicon glyphicon-log-in"></span> <b> Login</b></h3></a></li>
+
   {% endif %}
 
-<!-- <a href="#abc"><h4><b>CONTACT US</b></h4></a></li> -->
 
 
-{# Some logic on what to display for last item#}
-{% if user.is_authenticated %}
-<a href="{% url 'logout' %}"><h4><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;LOGOUT</b></h4></a></li>
-{% else %}
-<a href="{% url 'dappx:register' %}"><h4><span class="glyphicon glyphicon-user"></span><b> SIGN UP</b></h4></a></li>
-
-<a href="{% url 'dappx:user_login' %}"><h4><span class="glyphicon glyphicon-log-in"></span> <b> LOGIN</b></h4></a></li>
-{% endif %}
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 <i class="fa fa-bars"></i>
 </a>
@@ -325,7 +317,7 @@ body {
 </div>
 </nav>
 
-<div class="container">
+<div class="container" >
 {% block body_block %}
 {% endblock %}
 </div>
