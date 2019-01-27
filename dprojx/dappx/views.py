@@ -1,17 +1,21 @@
 from django.shortcuts import render
 from . import models
 from django.contrib import admin
-from dappx.forms import UserForm,UserProfileInfoForm,DocumentForm
-from dappx.models import UserProfileInfo,Document
+from dappx.forms import UserForm,UserProfileInfoForm,DocumentForm,NewProjectForm
+from dappx.models import UserProfileInfo,Document,NewProject
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseRedirect, HttpResponse
-from django.urls import reverse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
+from django.urls import reverse,reverse_lazy
 from django.contrib.auth.decorators import login_required
-from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView,DetailView,ListView,CreateView,UpdateView,DeleteView #################
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
+from django.shortcuts import redirect
 
-# admin.site.register(UserProfileInfo)
-admin.site.register(Document)
+from django.core.paginator import Paginator #for pagination
+
 
 def index(request):
     return render(request,'index.html')
@@ -25,30 +29,23 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
 
+def Cprogram(request):
+    return render(request,'Cprogram.html')
+
 def register(request):
     registered = False
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
-        # profile_form = UserProfileInfoForm(data=request.POST)
-        # if user_form.is_valid() and profile_form.is_valid():
         if user_form.is_valid():
             user = user_form.save()
             user.set_password(user.password)
             user.save()
-            # profile = profile_form.save(commit=False)
-            # profile.user = user
-            # if 'profile_pic' in request.FILES:
-            #     print('found it')
-            #     profile.profile_pic = request.FILES['profile_pic']
-            #     profile.save()
-                # registered = True
+
             registered = True
         else:
-            # print(user_form.errors,profile_form.errors)
             print(user_form.errors)
     else:
         user_form = UserForm()
-        # profile_form = UserProfileInfoForm()
     return render(request,'registration.html',
                             {'user_form':user_form,
                             # 'profile_form':profile_form,
@@ -89,10 +86,76 @@ def model_form_upload(request):
     return render(request,'videoform.html' , {
         'DocumentForm': form
     })
-# class projectlist(TemplateView):
-#     template_name = 'projectlist.html'
+
+@login_required
 def ProjectListView(request):
     documents=Document.objects.all()
     return render(request,'projectlist.html' , { 'documents': documents })
-class BuyNow(TemplateView):
-    template_name='buynow.html'
+
+
+
+def searchposts(request):
+    if request.method == 'GET':
+        query= request.GET.get('q')
+
+        submitbutton= request.GET.get('submit')
+
+        if query is not None:
+            lookups= Q(docname__icontains=query) | Q(description__icontains=query)
+
+            results= Document.objects.filter(lookups).distinct()
+
+            context={'results': results,
+                     'submitbutton': submitbutton}
+
+            return render(request, 'projectlist.html', context)
+
+        else:
+            return render(request, 'projectlist.html')
+
+    else:
+        return render(request, 'projectlist.html')
+
+
+class ProjectDetailView(LoginRequiredMixin,DetailView):
+    login_url = '/dappx/user_login/'
+    redirect_field_name = 'redirect_to'
+    # request.session['user'] = user.id
+    context_object_name = 'project_detail'
+    model = models.Document
+    template_name = 'buynow.html'
+
+
+#Pagination code
+class ProjectListView(ListView):
+    model = models.Document
+    template_name = 'projectlist.html'  # Default: <app_label>/<model_name>_list.html
+    context_object_name = 'documents'  # Default: object_list
+    paginate_by = 3
+    queryset = Document.objects.all()  # Default: Model.objects.all()
+
+@login_required
+def NewProject(request):
+    form = NewProjectForm(request.POST or None)
+    if form.is_valid():
+        newpro = form.save(commit=False)
+        newpro.user = request.user
+        newpro.save()
+        return redirect('index')
+    return render(request, 'dappx/newproject_form.html', {'form':form})
+#
+class MyProfileProjectListView(ListView):
+    context_object_name = 'MyProfile'
+    model= models.NewProject
+    template_name='myprofile.html'
+
+class NewProjectUpdateView(UpdateView):
+    fields=('project_name','project_details','technology_preferred','days_available')
+    # form = NewProjectForm(request.POST or None)
+    model = models.NewProject
+    template_name = 'projupdate.html'
+
+class NewProjectDeleteView(DeleteView):
+    model = models.NewProject
+    template_name = 'reqDelete.html'
+    success_url = reverse_lazy("dappx:MyProfile")
