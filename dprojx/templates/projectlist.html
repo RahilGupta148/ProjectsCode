@@ -51,7 +51,49 @@ div.desc {
 }
 </style>
 </head>
-<body style="background-color: #fffff">
+<body>
+  <form action="{% url 'dappx:searchposts' %}" method="GET" value="{{request.GET.q}}">
+
+   <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts" style="border : solid; width:250px; margin-left: 40px"></input>
+
+   <button type="submit" name="submit" class="btn btn-lg btn-success" value="Search" style="
+       padding: 10px 20px;
+       margin: 8px 10px;
+       border : none;
+       background-color:#dfe3ee;
+       cursor: pointer;"><i class="fa fa-search" style="font-size:20px; color:black"></i></button>
+    </form>
+
+
+  {% if submitbutton == 'Search' and request.GET.q != '' %}
+  {% if results %}
+  <!-- <h5>Results for <b>{{ request.GET.q }}</b></h5> -->
+
+  <br/><br/>
+
+  {% for obj in results %}
+
+  <div class="gallery">
+
+      <img src="{{ obj.vidimage.url }}" alt="not coming">
+
+    <div class="desc"> <b> {{ obj.docname }}</b><br>
+        <!-- Changing for youtube video -->
+        {% if user.is_authenticated %}
+        <a target="_blank" href="{{ obj.project_video }}">  <button type="button" class="btn btn-lg btn-success" style="background-color:#2C3E50"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
+        {% else %}
+        <a target="_blank" href="{% url 'dappx:user_login' %}?next={{request.path}}">  <button type="button" class="btn btn-lg btn-success" style="background-color:#2C3E50"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
+        {% endif %}
+        <a href="{{obj.id}}"> <button type="button" name="button" class="btn btn-lg btn-success" style="background-color:#2C3E50">Details!</button></a>
+    </div>
+  </div>
+    {% endfor %}
+
+  {% else %}
+  No search results for this query
+  {% endif %}
+  {% endif %}
+
 
   {% for obj in documents %}
 <div class="gallery">
@@ -59,11 +101,43 @@ div.desc {
     <img src="{{ obj.vidimage.url }}" alt="not coming">
 
   <div class="desc"> <b> {{ obj.docname }}</b><br>
-      <a target="_blank" href="{{ obj.project_video.url }}">  <button type="button" class="btn btn-lg btn-success"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
-      <a href="{% url 'dappx:buynow' %}"> <button type="button" name="button" class="btn btn-lg btn-success">Buy Now!</button></a>
+      <!-- Changing for youtube video -->
+      {% if user.is_authenticated %}
+      <a target="_blank" href="{{ obj.project_video }}">  <button type="button" class="btn btn-lg btn-success" style="background-color:#2C3E50"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
+      {% else %}
+      <a target="_blank" href="{% url 'dappx:user_login' %}?next={{request.path}}">  <button type="button" class="btn btn-lg btn-success" style="background-color:#2C3E50"><i class="glyphicon glyphicon-headphones"></i>Demo</button></a>
+      {% endif %}
+      <a href="{{obj.id}}"> <button type="button" name="button" class="btn btn-lg btn-success" style="background-color:#2C3E50">Details!</button></a>
   </div>
 </div>
   {% endfor %}
+
+
+  <div class="row" style="left:50%; bottom:10; text-align:center">
+
+
+    {% if is_paginated %}
+    <ul class="pagination">
+      {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&laquo;</span></li>
+      {% endif %}
+      {% for i in paginator.page_range %}
+        {% if page_obj.number == i %}
+          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        {% else %}
+          <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+  {% endif %}
+  </div>
 
 {% endblock %}
 
