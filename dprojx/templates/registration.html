@@ -12,8 +12,8 @@
 <h1>Register here!!</h1>
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
-  {{ user_form.as_p }}
-  {{ profile_form.as_p }}
+  {{ user_form.as_myp }}
+  {{ profile_form.as_myp }}
   <button type="submit" name="" class="btn btn-lg btn-success" value="Register" style="background-color:#2C3E50; color: white;
       padding: 14px 20px;
       margin: 8px 0;
