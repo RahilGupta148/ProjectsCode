@@ -26,9 +26,9 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 SECRET_KEY = 'fbnw7!@h*mjp@klc-_pp*(=wkh160kk98@hfvsr(f(sgw7ija2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['projectscode.pythonanywhere.com']
 
 
 # Application definition
