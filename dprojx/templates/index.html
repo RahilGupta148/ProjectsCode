@@ -1,69 +1,182 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="footer, address, phone, icons" />
-    <title>web site</title>
+<html lang="en" type="application/ld+json" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# video: http://ogp.me/ns/video#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="csrf-token" content="PRILWhZfCvDshjvds3FEwew6vGJx9nfYhmomOGts">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer-distributed-with-address-and-phones.css' %}">
+		<title>ProjectCode</title>
+      <link rel="shortcut icon" href="https://www.matrubharti.com/images/favicon/favicon.ico">
+	<link rel="apple-touch-icon" href="https://www.matrubharti.com/images/favicon/apple-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.matrubharti.com/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.matrubharti.com/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.matrubharti.com/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.matrubharti.com/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.matrubharti.com/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.matrubharti.com/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.matrubharti.com/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.matrubharti.com/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.matrubharti.com/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://www.matrubharti.com/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.matrubharti.com/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.matrubharti.com/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.matrubharti.com/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="https://www.matrubharti.com/images/favicon/manifest.json">
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/tinycircleslider.css' %}" rel="stylesheet" type="text/css" />
+  <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.core.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.default.css' %}">
 
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+      <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/footer-distributed-with-address-and-phones.css' %}">
 
-    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" />
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-    <link href="{% static 'assets/css/basic.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" />
-    <!-- GOOGLE FONTS-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-</head>
+      <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+      <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" />
 
-  ga('create', 'UA-21208757-1', 'auto');
-  ga('send', 'pageview');
+      <link href="{% static 'assets/css/basic.css' %}" rel="stylesheet" />
+      <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" />
+      <!-- GOOGLE FONTS-->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-</script>
-<!-- Bootstrap Core CSS -->
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
-<link href="{% static 'css/tinycircleslider.css' %}" rel="stylesheet" type="text/css" />
-<link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.core.css' %}">
-<link type="text/css" rel="stylesheet" href="{% static 'css/alertify/alertify.default.css' %}">
+	<meta name="application-name" content="Matrubharti.com">
+	<meta name="msapplication-config" content="https://www.matrubharti.com/images/favicon/browserconfig.xml" />
+	<meta name="msapplication-tooltip" content="Matrubharti.com" />
+	<meta name="msapplication-TileColor" content="#f89406">
+	<meta name="msapplication-TileImage" content="https://www.matrubharti.com/images/favicon/ms-icon-144x144.png">
+	<meta name="msapplication-navbutton-color" content="#f89406">
+	<meta name="msapplication-starturl" content="./" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Matrubharti.com">
+	<meta name="theme-color" content="#f89406">
+
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
+	<script type="text/javascript">
+		var APP_URL = "https:\/\/www.matrubharti.com\/"
+	</script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani:300,400,500,600,700,800" rel="stylesheet">
+
+	<script type="text/javascript">
+		var APP_URL = "https:\/\/www.matrubharti.com\/"
+	</script>
+
+
+
+		<script>
+
+	</script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://www.matrubharti.com/dist/bootstrap.min.css?v=20181211">
+    <link rel="stylesheet" href="https://www.matrubharti.com/dist/owl.carousel.min.css?v=20181211">
+    <link rel="stylesheet" href="https://www.matrubharti.com/dist/star-rating.min.css?v=20181211">
+    <link rel="stylesheet" href="https://www.matrubharti.com/dist/custom.css?v=20181225">
+    <link rel="stylesheet" href="https://www.matrubharti.com/dist/responsive.css?v=20181223">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/jquery-ui.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/jquery.rateyo.min.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/magnific-popup.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/intlTelInput.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/ajax-loader.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/jquery.jgrowl.css?v=20181211" type="text/css" />
+
+
+		<link rel="stylesheet" href="https://www.matrubharti.com/dist/one.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/notifydropdown.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/notification-detail.css?v=20181211">
+	<link rel="stylesheet" href="https://www.matrubharti.com/dist/trackpad-scroll-emulator.css?v=20181211">
+
+
+	<!-- Boook Reading -->
+	<script src="https://www.matrubharti.com/js/epub.js?v=20180906"></script>
+
+
+
+	<div id="divLoading">
+		<!--Loading records . . . wait-->
+	</div>
+
+
+
+
+		<link rel="stylesheet" href="https://www.matrubharti.com/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="https://www.matrubharti.com/css/jquery.fancybox.min.css">
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"url": "https://www.matrubharti.com",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://www.matrubharti.com/search?keyword={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+	   }
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type":"Organization",
+			"name":"Matrubharti Technologies Pvt. Ltd.",
+			"url": "https://www.matrubharti.com",
+			"email": "info@matrubharti.com",
+			"telephone": "+918866437373",
+			"logo": "https://www.matrubharti.com/images/favicon/apple-icon-180x180.png",
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"telephone": "+918866437373",
+					"email": "info@matrubharti.com",
+					"contactType": "customer service",
+					"areaServed" : "IN",
+					"availableLanguage" : ["English", "Hindi", "Marathi", "Tamil", "Telugu", "Kannada", "Gujarati", "Punjabi"]
+				}
+			],
+			"sameAs": [
+				"https://www.facebook.com/matrubharti",
+				"https://twitter.com/matrubharti",
+				"https://www.youtube.com/channel/UCJrKZ7Eu21oMX93n1tkx7gg",
+				"https://www.youtube.com/c/MatruBharti",
+				"https://play.google.com/store/apps/details?id=com.nichetech.matrubharti&hl=en",
+				"https://itunes.apple.com/in/app/matrubharti/id1013445673?mt=8",
+				"https://www.instagram.com/Matrubharti_Community"
+			]
+	   }
+	</script>
+
 <style type="text/css">
-.topnav {
-  overflow: hidden;
-  /* background-color: #333; */
+.main-banner {
+    background-image: url("/static/images/main4.png");
+    height: 110vh;
+    transition: 0.3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    width: 100%;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
 
-.topnav a:hover {
-  background-color:#E8DAEF;
-  color: black;
-}
 
-.footer {
+.footer1 {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -104,13 +217,7 @@
 
 .cube-page {
   color: #222;
-  /*
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;*/
+
 }
 
 .cube-container {
@@ -179,13 +286,15 @@
 @keyframes spin {
   from {
     transform: rotateY(0);
+    direction: ltr;
   }
   to {
     transform: rotateY(360deg);
+    direction: rtl;
   }
 }
 .box-faces, .shadow {
-  animation: spin 30s infinite linear;
+  animation: spin 10s infinite ;
 }
 
 .icon-rocket {
@@ -264,7 +373,8 @@ body {
 
 html,
 body {
-    height: 65% !important;
+    height: 45% !important;
+
 }
 
 
@@ -282,10 +392,6 @@ body {
   width: 100%;
   height: 50%;
   background-position: center;
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -295,71 +401,247 @@ body {
 .demo{
   margin-left: 50px;
 }
-.margin{
-  margin: 50px;
-}
+
 .bg1{
   background-repeat: no-repeat;
   /* background-size: auto; */
   background-size: 3800px 1800px;
 }
 .content3 {
-  /* position: absolute; /* Position the background text */ */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
-  /* padding: 20px; /* Some padding */ */
+
+}
+.content4 {
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 2px 0 2px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  /* padding: 16px; */
+}
+
+span.psw {
+  float: right;
+  padding-top: 6px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* padding-top: 60px; */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%;
+  height:32%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: blue;
+  font-size: 35px;
+  font-weight: bold;
+}3
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.back{
+  background-image: url("/static/images/back.png");
+  height: auto;
+  /* width: 100%; */
+}
+
+
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
 </style>
+    </head>
+
+  <body>
 
 
-<!-- <body background="C:\Users\Usr\Desktop\bg6.jpg" style="background-repeat: no-repeat, repeat; background-size: 100% auto;"> -->
-    <!-- <div class="top-container" style="background-color:black">
-<!--  -->
 
-  <!-- </div> -->
-  <!-- <body style="background-color:#38404E"> -->
-  <body style="background-image:url('{% static "images/ma16.jpg" %}')" class="bg1">
+	<!-- Header -->
+	<!-- Main navigation Starts -->
 
-  <nav class="navbar navbar-inverse bg1" style="background-color:#2C3E50">
-   <!-- style="background-image:url('{% static "images/ma16.jpg" %}')"> -->
-  <div class="container-fluid">
-{# Django Home Link / Admin Link / Register Link#}
-<ul class="nav navbar-nav" >
-  <div class="topnav" id="myTopnav">
-    <a href="#" ><img src="{% static "images/logo1.png" %}" alt="LOGO" height="55px" width="200px"></a>
-    <a href="{% url 'index' %}"><h4 class="active"><i style="color:#E8DAEF" class="fa fa-home"></i></h4></a></li>
+  <div class="modal fade" id="videomodal" role="dialog">
+    <div class="modal-dialog">
 
-    {% if user.is_authenticated %}
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <iframe id="videohome" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
 
-      <a href="{% url 'dappx:projectlist' %}"><h4><b>PROJECTS</b></h4></a>
+    </div>
+  </div>
 
-    {% else %}
-    <a href="{% url 'dappx:user_login'%}"> <h4><b>PROJECTS</b></h4></a>
-    {% endif %}
-  <a href="#abc"><h4><b>CONTACT US</b></h4></a></li>
+<!-- Bites image Modal -->
+	<div id="imgModal" class="img_modal">
+	  <div class="img_modalcontent">
+	    <span class="img_close" onclick="$('#imgModal').fadeOut();$('body').removeClass('imgModal_overflow');">×</span>
+	    <img src="" id="popupimage">
+	  </div>
+	</div>
 
 
-  {# Some logic on what to display for last item#}
-  {% if user.is_authenticated %}
-  <a href="{% url 'logout' %}"><h4><span class="glyphicon glyphicon-log-in"></span><b> &nbsp;LOGOUT</b></h4></a></li>
-  {% else %}
-  <a href="{% url 'dappx:register' %}"><h4><span class="glyphicon glyphicon-user"></span><b> SIGN UP</b></h4></a></li>
+<nav class="navbar navbar-inverse navbar-fixed-top customnav ">
+  <div class="container" >
+	<!--<div class="navbar-header inner-page-header">-->
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+<a href="{% url 'index' %}"><img src="{% static "images/logomain.png" %}" alt="ProjectsCode" height="120px" width="230px"></a>
 
-  <a href="{% url 'dappx:user_login' %}"><h4><span class="glyphicon glyphicon-log-in"></span> <b> LOGIN</b></h4></a></li>
-  {% endif %}
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</ul>
-</div>
-</div>
+	<!--</div>-->
+	<div class="header-right">
+		<div id="navbar" class="collapse navbar-collapse inner-page-nav">
+		  <ul class="nav navbar-nav">
+			<li><a href="{% url 'dappx:projectlist' %}">Projects</a></li>
+			<li class=""><a href="{% url 'dappx:Cprogram'%}">Python Practice</a></li>
+			<li class=""><a href="#abc">Contact Us</a></li>
+
+        {# Some logic on what to display for last item#}
+        {% if user.is_authenticated %}
+
+			<li><a href="{% url 'dappx:MyProfile'%}"> <img style='width:30px; height:30px' src="{% static "images/profile.png" %}"/>My Profile</a></li>
+			<li><a href="{% url 'logout' %}" target="_blank"><span class="glyphicon glyphicon-log-in"></span><b>Logout</a></li>
+      {% else %}
+      <li class=""><a href="{% url 'dappx:register' %}"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+      <li class=""><a href="{% url 'dappx:user_login' %}?next={{request.path}}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      {% endif %}
+
+		  </ul>
+		</div>
+
+		<div class="right-items">
+
+		</div>
+	</div>
+  </div>
 </nav>
 
 
+<section class="main-banner">
+  <div class="center-content">
+      <div class="center-content-inner">
+
+         <div class="banner-text text-center">
+
+
+
+           <h2>Explore.Imagine.Ideas.Create.</h2>
+           <br>
+           <h1 class="line-1 anim-typewriter">Your Thoughts And Our Efforts</h1>
+            <h2>Think.Create.Develop.Share</h2>
+                        <div class="banner-buttons">
+               <!-- User Name -->
+
+               <div class="social-buttons">
+                  <ul>
+                     <li class="google-btn" title="Continue with Google">
+                        <a href="{% url 'dappx:register' %}">
+                          <span class="glyphicon glyphicon-user"></span>
+                        <span>Join Us</span>
+                        </a>
+
+                     </li>
+                     <li class="fb-button" title="Continue with Facebook">
+                        <a href="{% url 'dappx:user_login' %}?next={{request.path}} %}">
+                      <span class="glyphicon glyphicon-log-in"></span>
+                        <span>Login</span>
+                        </a>
+
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="show-inp">
+                                    <form id="frmLogin1">
+                     <input type="hidden" name="_token" value="PRILWhZfCvDshjvds3FEwew6vGJx9nfYhmomOGts">
+                     <input autofocus type="text" name="tb_username" id="tb_username1" placeholder="E-mail or Mobile number" value="" maxlength="50">
+                     <input type="hidden" name="countryCode" id="countryCode1" value='91'>
+                     <button type="submit" id="btnSignin" class="orange-btn book-white-btn" type="button">Login</button>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -369,39 +651,56 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 
+<section class="stories-section">
 
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="main-box mb-red" style="background-color:#E8DAEF;">
-            <a href="#">
-                <i style="color:black" class="fa fa-bolt fa-5x"></i>
-                <h5 style="color:black"></br>Project Development Guidance</h5>
-            </a>
-        </div>
-    </div>
+
+  <div class=" row">
+      <div class="col-md-4">
+          <div class="main-box mb-red lightblue-box">
+              <a href="#">
+                  <i style="color:white" class="fa fa-bolt fa-5x"></i>
+                  <h5 style="color:white"></br>Project Development Guidance</h5>
+              </a>
+          </div>
+      </div>
+
+      <a href="{% url 'dappx:projectlist' %}">
+          <div class="col-md-4">
+              <div class="main-box mb-dull  purple-box">
+
+                      <i class="fa fa-plug fa-5x" style="color:white"></i>
+                      <h5 style="color:white">Fully tested ready projects & explanations</h5>
+              </div>
+          </div>  </a>
+          <!-- ################################################################### -->
+          <a href="{% url 'dappx:NewProject' %}">
+          <div class="col-md-4">
+              <div class="main-box mb-pink pink-box">
+
+                      <i class="fa fa-dollar fa-5x" style="color:white"></i>
+                      <h5 style="color:white font-family:Times New Roman">Development of new projects as per your requirements</h5>
+
+                  </a>
+              </div>
+          </div>
+      </div>
 
 
-    <div class="col-md-4">
-        <div class="main-box mb-dull" style="background-color:#E8DAEF">
-            <a href="#">
-                <i class="fa fa-plug fa-5x" style="color:black"></i>
-                <h5 style="color:black"><br>Fully tested ready projects & explanations</h5>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="main-box mb-pink" style="background-color:#E8DAEF">
-            <a href="#">
-                <i class="fa fa-dollar fa-5x" style="color:black"></i>
-                <h5 style="color:black">Development of new projects as per your requirements</h5>
-            </a>
-        </div>
-    </div>
+</section>
+<br>
+<br>
 
-</div>
+
 
 <div class="carousel-inner">
     <div class="item active">
@@ -410,7 +709,7 @@ function myFunction() {
                           <td>
 <!-- -----1----- -->
 
-<div class="row" id="Awards">
+<div class="row " id="Awards">
 <div class="col-md-6 col-sm-offset-1 section-div">
 <!-- JJ -->
 <div class="cube-page">
@@ -424,24 +723,24 @@ function myFunction() {
       <div class="box-faces">
         <div class="box-face box-face--is-front">
           <p>
-            <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+            <img style='width:300px; height:200px;' src="{% static "images/d1.jpg" %}"/>
           </p>
         </div>
         <div class="box-face box-face--is-back">
           <p>
-            <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+            <img style='width:300px; height:200px;' src="{% static "images/d2.jpg" %}"/>
           </p>
         </div>
         <div class="box-face box-face--is-top">&nbsp;</div>
         <div class="box-face box-face--is-bottom">&nbsp;</div>
         <div class="box-face box-face--is-left">
           <p>
-            <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+            <img style='width:300px; height:200px;' src="{% static "images/d3.jpg" %}"/>
           </p>
         </div>
         <div class="box-face box-face--is-right">
           <p>
-            <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+            <img style='width:300px; height:200px;' src="{% static "images/d4.jpg" %}"/>
           </p>
         </div>
 
@@ -469,24 +768,24 @@ function myFunction() {
                                               <div class="box-faces">
                                                 <div class="box-face box-face--is-front">
                                                   <p>
-                                                    <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                    <img style='width:300px; height:200px;' src="{% static "images/v1.jpg" %}"/>
                                                   </p>
                                                 </div>
                                                 <div class="box-face box-face--is-back">
                                                   <p>
-                                                    <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                    <img style='width:300px; height:200px;' src="{% static "images/v2.jpg" %}"/>
                                                   </p>
                                                 </div>
                                                 <div class="box-face box-face--is-top">&nbsp;</div>
                                                 <div class="box-face box-face--is-bottom">&nbsp;</div>
                                                 <div class="box-face box-face--is-left">
                                                   <p>
-                                                    <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                    <img style='width:300px; height:200px;' src="{% static "images/v3.jpg" %}"/>
                                                   </p>
                                                 </div>
                                                 <div class="box-face box-face--is-right">
                                                   <p>
-                                                    <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                    <img style='width:300px; height:200px;' src="{% static "images/v4.jpg" %}"/>
                                                   </p>
                                                 </div>
 
@@ -517,24 +816,24 @@ function myFunction() {
                                                 <div class="box-faces">
                                                   <div class="box-face box-face--is-front">
                                                     <p>
-                                                      <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                      <img style='width:300px; height:200px;' src="{% static "images/p1.jpg" %}"/>
                                                     </p>
                                                   </div>
                                                   <div class="box-face box-face--is-back">
                                                     <p>
-                                                        <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                        <img style='width:300px; height:200px;' src="{% static "images/p2.jpg" %}"/>
                                                     </p>
                                                   </div>
                                                   <div class="box-face box-face--is-top">&nbsp;</div>
                                                   <div class="box-face box-face--is-bottom">&nbsp;</div>
                                                   <div class="box-face box-face--is-left">
                                                     <p>
-                                                        <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                        <img style='width:300px; height:200px;' src="{% static "images/p3.jpg" %}"/>
                                                     </p>
                                                   </div>
                                                   <div class="box-face box-face--is-right">
                                                     <p>
-                                                        <img style='width:300px' src="{% static "images/i4jpg.jpg" %}"/>
+                                                        <img style='width:300px; height:200px;' src="{% static "images/p4.jpg" %}"/>
                                                     </p>
                                                   </div>
 
@@ -557,15 +856,16 @@ function myFunction() {
 
 </div>
 </div>
+<br>
+<br>
 
-
-<div class="row">
+<div class="row jumbotron" style="background-image:url('{% static "images/back.png" %}'); background-repeat: no-repeat; background-size:100% 1500px">
     <div class="col-md-8">
         <div class="row">
           <div class="carousel-inner">
               <div class="item active">
-
-  <img style='width:900px' src="{% static "images/mystep.png" %}" class="margin"/>
+<br><br><br>
+  <img style='width:900px' src="{% static "images/mystep.png" %}"/>
                 </div>
             </div>
                     <!-- </div> -->
@@ -579,50 +879,24 @@ function myFunction() {
       <div class="col-md-4">
 
           <div class="panel panel-default">
-              <div class="panel-heading" style="background-color:#2C3E50">
-                  <p style="color:white"><b>Recent Chat History</b></p>
+              <div class="panel-heading " style="background-color:#EDF5E1;">
+                  <p style="color:black"><b>Recent Chat History</b></p>
               </div>
-              <div class="panel-body content3" style="padding: 0px;">
+              <div class="panel-body" style="padding: 0px; background-color:#dfe3ee">
                   <div class="chat-widget-main">
 
-
-                      <!-- <div class="chat-widget-left">
-                          <img style='width:250px' src="{% static "images/sc.jpg" %}"/>
-                      </div> -->
                       <div class="chat-widget-name-left">
                         <img style='width:250px' src="{% static "images/sc.jpg" %}"/>
 
                       </div>
-                      <!-- <div class="chat-widget-right">
-                            <img style='width:250px' src="{% static "images/sc.jpg" %}"/>
-                      </div> -->
+
                       <div class="chat-widget-name-right">
                         <img style='width:250px' src="{% static "images/sc2.jpg" %}"/>
 
                       </div>
-                      <!-- <div class="chat-widget-left">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </div>
-                      <div class="chat-widget-name-left">
-                          <h4>Amanna Seiar</h4>
-                      </div>
-                      <div class="chat-widget-right">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </div>
-                      <div class="chat-widget-name-right">
-                          <h4>Donim Cruseia </h4>
-                      </div> -->
                   </div>
               </div>
-              <!-- <div class="panel-footer">
-                  <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Enter Message" />
-                      <span class="input-group-btn">
-                          <button class="btn btn-success" type="button">SEND</button>
-                      </span>
-                  </div>
-              </div> -->
-          </div>
+                      </div>
 
 
       </div>
@@ -632,62 +906,338 @@ function myFunction() {
 
 
 
-    <!-- <hr /> -->
-    <a name="abc" style="text-decoration:none">
-
-    <div class="row footer content3">
-      <!-- style="background-color:#2C3E50" -->
-      <div class="col-md-4" style="margin-left:50px">
-    <h2 >OurProjects.com</h2>
-    <h4 style="color:lightblue"><b> Contact Us:</b><br>
-     9712768420 / 7600001266 / 7016040508
-    </h3>
-    <h4>Email us at: rahilgupta148@gmail.com</h4>
-    <h5 style="color:lightblue"><b>Developed by:</b></h5>
-    Rahil Gupta and Vishakha Shah<br>
-    [ CEO at OurProjects pvt Ltd. ]
-    </div>
-
-    <div class"col-md-8">
-      <br>
-      <p style="text-align:center"><span style="font-size:12px"><font size="5px"> Join us at :</font></span></p>
 
 
-      <br>
 
-    <p style="text-align:center">
+
+
+
+
+
+<div class="row footer content3">
+  <!-- style="background-color:#2C3E50" -->
+
+  <div class="col-md-7 col-sm-6">
+    <div class="footer-left">
+    <h4>DO YOU HAVE QUESTIONS ABOUT PROJECTS CODE ?</h4>
+    <h5> <b>Contact us about anything related to our company or services. We&#039;ll do our best to get back to you as soon as possible.</b></h5>
+
+
+
+    <div class="clear-fix"></div>
+
+    <p style="text-align:center; margin-top:80px;">
     <!--Facebook icon-->
-    <a href="http://facebook.com/flashissue" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/YdvNzBsfTrqg9Cx9Tozh_Facebook-e1386022800280.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp; &nbsp;
+    <a href="https://www.facebook.com/ProjectsCode-520744601740677/?modal=admin_todo_tour" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/YdvNzBsfTrqg9Cx9Tozh_Facebook-e1386022800280.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp; &nbsp;
     <!--Google+ icon-->
-    <a href="http://plus.google.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/HdT6jbRJRhqyPu3BKhi7_google-Plus-e1386022876181.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp;&nbsp;
+    <a href="https://plus.google.com/b/104936396172144444159/104936396172144444159" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/HdT6jbRJRhqyPu3BKhi7_google-Plus-e1386022876181.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp;&nbsp;
     <!--Twitter icon-->
-    <a href="http://twitter.com/flashissue" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/3b3zdiavSf26SleQOaDd_twitter-e1386023015819.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp;&nbsp;
+    <a href="https://twitter.com/rahilgupta148" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/3b3zdiavSf26SleQOaDd_twitter-e1386023015819.png" style="height:50px; width:50px" /> </a>&nbsp; &nbsp;&nbsp;
     <!--Linkedin icon-->
     <a href="http://linkedin.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/dJtLdIsbRAix3zQhvygP_linkedin_icon_dark_hover-5be7d72ca83a10c0c76c32d141b0b828.png" style="height:50px; width:50px" /> </a>
     </p>
     </div>
+  </div>
+
+
+  <div class="col-md-5 col-sm-6">
+    <div class="footer-right">
+    <h5>Contact us</h5>
+    <ul>
+       <li>
+       <div class="icons">
+         <img src="https://www.matrubharti.com/images/phone.png" alt="phone">
+       </div>
+       <div class="links">
+         <a href="tel:+918866437373">+91-70-16-04-05-08</a>
+       </div>
+       </li>
+       <li>
+       <div class="icons">
+         <img src="https://www.matrubharti.com/images/email.png" alt="Email">
+       </div>
+       <div class="links">
+         <a href="mailto:info@matrubharti.com">rahilgupta148@gmail.com</a>
+       </div>
+       </li>
+       <li>
+       <div class="icons">
+         <img src="https://www.matrubharti.com/images/map-pin.png" alt="phone">
+       </div>
+       <div class="links">
+         <p>ProjectCode</p>
+         <p>30,Avadhpuri Society,</p>
+         <p>Near Panchamrut Party Plot,</p>
+         <p>Kalol - 382721</p>
+         <p>Gujarat, India.</p>
+         <p>Contact Person : Rahil Gupta, Vishakha Shah  </p>
+         <p>7600001266</p>
+       </div>
+       </li>
+     </ul>
     </div>
-</a>
-    <script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
-    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+	/* START :Google Analytics*/
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-59726154-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+</script>
+
+	<script src="https://www.matrubharti.com/js/jquery-3.3.1.min.js"></script>
+
+    <script src="https://www.matrubharti.com/js/bootstrap.min.js"></script>
+    <script src="https://www.matrubharti.com/js/owl.carousel.js"></script>
+    <script src="https://www.matrubharti.com/js/star-rating.js"></script>
+    <script src="https://www.matrubharti.com/js/custom.js?v=20180914"></script>
+	<script src="https://www.matrubharti.com/js/jquery-ui.js"></script>
+
+    <script src="https://www.matrubharti.com/js/zip.min.js?v=20180906"></script>
+    <script src="https://www.matrubharti.com/js/reader.js?v=20180906"></script>
+
+
+		<script src="https://www.matrubharti.com/js/jquery.validate.js"></script>
+	<script src="https://www.matrubharti.com/js/verify_otp.js?v=20180906"></script>
+
+			<script type="text/javascript">
+		$(document).ready(function(){
+		});
+		</script>
+
+	<script>
+		 // Search - Home Page
+		 $('#keyword').autocomplete({
+
+		   source:'https://www.matrubharti.com/autocomplete',
+			 minlength:1,
+			 autoFocus:true,
+			 select:function(e,ui)
+			 {
+				 if(ui.item){
+					 $('#keyword').val(ui.item.value);
+				 }
+				 $('#search').submit();
+
+			 }
+		 });
+		 // Search - Header
+		 $('#keyword0').autocomplete({
+		   source:'https://www.matrubharti.com/autocomplete',
+			 minlength:1,
+			 autoFocus:true,
+			 select:function(e,ui)
+			 {
+				 if(ui.item){
+					 $('#keyword0').val(ui.item.value);
+				 }
+				 $('#search0').submit();
+
+			 }
+		 });
+
+		 $('#keyword,#keyword0').on('keypress', function (event) {
+			var regex = new RegExp("^[a-zA-Z0-9 ]+$");
+			var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+			if (!regex.test(key)) {
+			   event.preventDefault();
+			   return false;
+			}
+		});
+
+		 $('#keyword,#keyword0').on("cut copy paste",function(e) {
+			  e.preventDefault();
+		   });
+
+	</script>
+
+		<script src="https://www.matrubharti.com/js/jquery.validate.js"></script>
+*        <script src="https://www.matrubharti.com/js/login-common.js?v=20180912"></script>
+		<script src="https://www.matrubharti.com/js/data.js"></script>
+		<script src="https://www.matrubharti.com/js/utils.js"></script>
+		<script src="https://www.matrubharti.com/js/intlTelInput.js"></script>
+		<script>
+			$('#tb_username').keyup(function(e) {
+				if ($.isNumeric($(this).val())) {
+                    $(this).intlTelInput();
+					$(this).focus();
+                    }
+				else {
+					//alert("hi");
+					$(this).intlTelInput("destroy");
+					$(this).focus();
+
+				}
+
+			});
+			$("#tb_username").on("countrychange", function (e, countryData) {
+                $("#countryCode").val(countryData.dialCode);
+            });
+			$('#tb_username1').keyup(function(e) {
+				if ($.isNumeric($(this).val())) {
+                    $(this).intlTelInput();
+					$(this).focus();
+                    //$("#tb_mobile").intlTelInput();
+                }
+				else {
+					//alert("hi");
+					$(this).intlTelInput("destroy");
+					$(this).focus();
+
+				}
+			});
+			$("#tb_username1").on("countrychange", function (e, countryData) {
+                $("#countryCode1").val(countryData.dialCode);
+            });
+			//$('#mobile_no').keyup(function(e) {
+				$('#mobile_no').intlTelInput();
+			//});
+		</script>
+
+			<script>
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll >= 2) {
+					$(".sidebar").removeClass("affix");
+				}
+			});
+
+			$(document).ready(function(){
+
+
+			  var selector = '.sidebar .panel .panel-body ul li';
+
+				$(selector).on('click', function(){
+					$(selector).removeClass('active');
+					$(this).addClass('active');
+				});
+			});
+		</script>
+
+
+	<script type="text/javascript" src="https://www.matrubharti.com/js/jquery.jgrowl.js"></script>
+	<script>
+	// In case you don't have firebug...
+		if (typeof console === "undefined") {
+			console = {
+				log: function() {}
+			};
+		}
+
+		(function($) {
+			$(function() {
+				$.jGrowl.defaults.pool = 5;
+				$.jGrowl.defaults.closerTemplate = '';
+				$.jGrowl.defaults.closer = function() {
+					console.log("Closing everything!", this);
+				};
+
+				// A callback for logging notifications.
+				$.jGrowl.defaults.log = function(e, m, o) {
+					$('#logs').append("<div><strong>#" + $(e).attr('id') + "</strong> <em>" + (new Date()).getTime() + "</em>: " + m + " (" + o.theme + ")</div>")
+				}
+
+				$.jGrowl("This message will not open because we have a callback that returns false.", {
+					beforeOpen: function() {
+						console.log("Going to open a notification, but not really...");
+					},
+					open: function() {
+						return false;
+					}
+				});
+				$('#test1').jGrowl("Testing a custom container.", {
+					closer: false,
+					sticky: true,
+					glue: 'before'
+				});
+
+				$('#test1').jGrowl("This will be prepended before the last message.", {
+					glue: 'before'
+				});
+			});
+		})(jQuery);
+		 $(document).ready(function () {
+
+			$('input:radio').click(function () {
+			  if(this.value == 'female')
+			  {
+				$("#male-img").removeClass('active');
+				$("#female-img").addClass('active');
+			  }
+			  if(this.value == 'male')
+			  {
+				$("#female-img").removeClass('active');
+				$("#male-img").addClass('active');
+			  }
+			});
+		  });
+
+	</script>
+
+
+	<script>
+	function removesession(){
+		location.reload(true);
+	}
+	</script>
 
 
 
+	<script type="text/javascript">
+		/* START :Google Analytics*/
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-59726154-1']);
+		  _gaq.push(['_trackPageview']);
 
-        <script src="{% static 'js/jquery-latest.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.js' %}"></script>
-        <script src="{% static 'js/scrollReveal.js' %}"></script>
-        <script src="{% static '/js/alertify.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.tinycircleslider.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
-        <script type="text/javascript" src="{% static '/js/socket.io.2.0.3.slim.js' %}"></script>
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+	</script>
+
+
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/55b7164c641dfa0831afabbb/default';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 
 
 
-    </body>
+<script>
 
+$(document).ready(function(){
+	$("#videomodal").on('hide.bs.modal', function(){
+        $("#videohome").attr('src', '');
+    });
 
+	$('.videosectionmain .owl-carousel .item a ').click(function(){
+		var src = $(this).attr("href");
+		$("#videohome").attr('src', src);
+		$('#videomodal').modal("show");
+		return false;
+	});
+});
+</script>
 
-    </html>
+  </body>
+</html>
